@@ -291,13 +291,23 @@ public class LoginCheck extends HttpServlet {
 
 简单说就是为找到SqlSessionFactoryBuilder类，但是显然我的maven项目中导入了该类，不使用SqlUtil依旧无效
 
+出错代码为：factory=new SqlSessionFactoryBuilder().build(in);
+将该代码单独提出来，运行没有问题，启动tomcat运行出错
 
+解决：包加载问题
+1、将lib库文件夹放置到web/WEB_INF 目录下
 
-​	
+2、选择lib，右键，点击add as library,将lib库加载到项目库中，让程序识别
 
+3、重新启动tomcat，解决。
 
+>  直接将Mybais包导入到webapp里面的lib中让webapp识别
 
+![image-20241011003140883](images/image-20241011003140883.png)	
 
+> 问题成功解决，像这种情况直接将问题复制到Google上搜索处理速度更快，对问题的针对性是比ChatGPT更好的
+
+> 同样的问题用同样的解决方式了
 
 ## Cookie设置
 

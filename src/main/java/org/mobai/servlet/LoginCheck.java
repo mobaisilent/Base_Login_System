@@ -30,6 +30,7 @@ public class LoginCheck extends HttpServlet {
       String password = req.getParameter("password");
       SqlUtil.doSql(mapper -> {
         User user = mapper.userCheck(username, password);
+        System.out.println(user );
         if (user != null) {
           req.getSession().setAttribute("user", user);
           try {
