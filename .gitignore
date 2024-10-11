@@ -11,7 +11,7 @@
 .mtj.tmp/
 
 # Package Files #
-*.jar
+#*.jar # 目的是将web/lib下的两个jar包上传到仓库中
 *.war
 *.nar
 *.ear

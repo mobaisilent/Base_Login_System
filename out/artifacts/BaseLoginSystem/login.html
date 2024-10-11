@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>登录到系统</h1>
-<form method="post" action="loginCheck">
+<form method="post" action="homepage">
     <hr>
     <div>
         <label>
@@ -21,8 +21,22 @@
         </label>
     </div>
     <div>
+        <label>
+            <input type="checkbox" placeholder="记住我" name="remember-me">
+            记住我
+        </label>
+    </div>
+    <div>
         <button class="myButton">登录</button>
     </div>
 </form>
+<hr>
+<div id="time"></div>
+<!-- 这个div放时间内容 -->
+<br>
+<button onclick="updateTime()">更新数据</button>
+<script>
+    updateTime()
+</script>
 </body>
 </html>
